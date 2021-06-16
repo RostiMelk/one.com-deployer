@@ -66,7 +66,7 @@ jobs:
 
 2. Store your public and private keys in the GitHub repository of your website as new 'Secrets' (under your repository settings) using the names `PRIVATE_KEY_NAME` and `PUBLIC_KEY_NAME` respectively with the name in your specfic files. These can be customized, just remember to change the var in the yml file to call them correctly.
 
-## Setup up your public SSH key for your One.com site.
+## Add up your public SSH key for your One.com site.
 
 1. SSH in to your One.com install using terminal.
 2. Without navigating to any path, create a .ssh folder with: `$ mkdir .ssh`.
@@ -74,5 +74,5 @@ jobs:
 4. Create an empty file in the folder called authorized_keys: `$ touch authorized_keys`.
 5. In the authorized_keys file, you want to add your SSH public key that you generated before. You can do this using nano: `$ nano authorized_keys`.
 6. Paste in your key.
-7. To exit nano, type Ctrl + X . If you ask nano to exit from a modified file, it will ask you if you want to save it. Press Y to save the file.
+7. To exit nano, click Ctrl + X . If you ask nano to exit from a modified file, it will ask you if you want to save it. Press Y to save the file.
 8. You can not safely exit SSH by typing: `$ exit`.
