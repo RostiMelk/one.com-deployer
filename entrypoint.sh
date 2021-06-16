@@ -15,7 +15,7 @@ ONE_SSH_KEY_PUBLIC_PATH="$SSH_PATH/github_action.pub"
 #Deploy Vars
 ONE_SSH_HOST="ssh.$ONE_DOMAIN_NAME"
 if [ -n "$TPO_PATH" ]; then
-    DIR_PATH="/$TPO_PATH"
+    DIR_PATH="$TPO_PATH"
 else
     DIR_PATH=""
 fi
@@ -28,8 +28,9 @@ fi
 
 ONE_SSH_USER="$ONE_DOMAIN_NAME"@ssh."$ONE_DOMAIN_NAME"
 
-ONE_DESTINATION="$ONE_SSH_USER":../../www"$DIR_PATH"
+ONE_DESTINATION="$ONE_SSH_USER":/../../www/"$DIR_PATH"
 
+echo "SRC: $SRC_PATH"
 echo "DEST: $ONE_DESTINATION"
 
 # Setup our SSH Connection & use keys
