@@ -28,14 +28,11 @@ jobs:
     - name: GitHub Deploy to One.com
       uses: rostimelk/one.com-deployer@master
       env:
-          ONE_ENV_NAME: yourdomainname.com
+          ONE_DOMAIN_NAME: yourdomainname.com
           ONE_SSH_KEY_PUBLIC: ${{ secrets.PUBLIC_KEY_NAME }}
           ONE_SSH_KEY_PRIVATE: ${{ secrets.PRIVATE_KEY_NAME }}
           TPO_SRC_PATH: ""
           TPO_PATH: ""
-
-
-
 ```
 
 ## Environment Variables & Secrets
