@@ -28,7 +28,7 @@ fi
 
 ONE_SSH_USER="$ONE_DOMAIN_NAME"@ssh."$ONE_DOMAIN_NAME"
 
-ONE_DESTINATION="$ONE_SSH_USER"/"$DIR_PATH"
+ONE_DESTINATION="$ONE_SSH_USER":../../www/"$DIR_PATH"
 
 # Setup our SSH Connection & use keys
 mkdir "$SSH_PATH"
