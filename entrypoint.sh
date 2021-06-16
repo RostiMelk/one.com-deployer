@@ -30,6 +30,8 @@ ONE_SSH_USER="$ONE_DOMAIN_NAME"@ssh."$ONE_DOMAIN_NAME"
 
 ONE_DESTINATION="$ONE_SSH_USER":../../www/"$DIR_PATH"
 
+echo "DEST: $ONE_DESTINATION"
+
 # Setup our SSH Connection & use keys
 mkdir "$SSH_PATH"
 ssh-keyscan -t rsa "$ONE_SSH_HOST" >> "$KNOWN_HOSTS_PATH"
