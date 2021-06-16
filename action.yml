@@ -1,0 +1,19 @@
+name: 'Deploy sites to One.com'
+branding:
+    icon: 'upload-cloud'
+    color: 'GREEN'
+description: 'An action to deploy your repository to One.com via SSH'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+inputs:
+    ONE_DOMAIN_NAME:
+        description: 'The domain name of the One.com site you want to deploy to.'
+    ONE_SSH_KEY_PUBLIC:
+        description: 'Private SSH Key for deployment. See README.md for SSH key usage.'
+    ONE_SSH_KEY_PRIVATE:
+        description: 'Public SSH Key for deployment. See README.md for SSH key usage and how to add your public key to One.com.'
+    TPO_SRC_PATH:
+        description: 'An optional source directory to deploy other than the root directory that is being versioned.'
+    TPO_PATH:
+        description: 'An optional destination directory to deploy to other than the www root.'
