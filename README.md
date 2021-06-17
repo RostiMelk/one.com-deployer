@@ -10,7 +10,7 @@ This GitHub Action can be used to deploy your repo/branch from Github to a One.c
 
 3. Git push your site repo.
 
-```
+```yml
 name: Deploy to One.com
 
 on:
