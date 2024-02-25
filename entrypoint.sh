@@ -52,5 +52,5 @@ rsync -e "ssh -v -p 22 -i ${ONE_SSH_KEY_PRIVATE_PATH} -o StrictHostKeyChecking=n
 
 
 # Clear cache
-ssh -v -p 22 -i ${ONE_SSH_KEY_PRIVATE_PATH} -o StrictHostKeyChecking=no $ONE_SSH_USER "cache-purge"
+ssh -v -p 22 -i ${ONE_SSH_KEY_PRIVATE_PATH} -o StrictHostKeyChecking=no $ONE_SSH_USER "cache-purge -v www.${ONE_DOMAIN_NAME}"
 echo "SUCCESS: Site has been deployed and cache has been flushed."
